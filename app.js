@@ -28,7 +28,23 @@ document.addEventListener('DOMContentLoaded', () => {
         completedTasks.forEach(task => taskList.removeChild(task));
     });
 
-    taskList.addEventListener('click', (e) => {
+    taskList.addEventListener('click', (e) => {        
+        if (e.target.tagName === 'BUTTON' && e.target.textContent === '🗑️') {
+            if (confirm('Are you sure you want to delete this task?')) {
+                const li = e.target.parentElement;
+                li.classList.add('removing');
+                li.addEventListener('animationend', () => {
+                    taskList.removeChild(li);
+                });
+            }
+        } else if (e.target.tagName === 'BUTTON' && e.target.textContent === '✏️') {
+            const li = e.target.parentElement;
+            const taskText = li.firstChild.textContent;
+            const newTaskText = prompt('Edit task:', taskText);
+            if (newTaskText !== null) {
+                li.firstChild.textContent = newTaskText;
+            }
+        } else if (e.target.tagName === 'LI') {
         if (e.target.tagName === 'BUTTON') {
             const li = e.target.parentElement;
             li.classList.add('removing');
@@ -43,9 +59,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function addTask(taskText) {
         const li = document.createElement('li');
         li.textContent = taskText;
+        const editBtn = document.createElement('button');
+        editBtn.textContent = '✏️';
+        li.appendChild(editBtn);
+        
         const deleteBtn = document.createElement('button');
         deleteBtn.textContent = '🗑️';
-        li.appendChild(deleteBtn);
+        li.appendChild(deleteBtn);        
         taskList.appendChild(li);
     }
 });
