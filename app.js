@@ -52,11 +52,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function addTask(taskText) {
         const li = document.createElement('li');
         li.textContent = taskText;
-        const editBtn = document.createElement('button');
+        const editBtn = document.createElement('button');        
+        editBtn.style.marginRight = '0'; // Remove extra spacing
         editBtn.textContent = '✏️';
         li.appendChild(editBtn);
         
-        const deleteBtn = document.createElement('button');
+        const deleteBtn = document.createElement('button');        
+        deleteBtn.style.marginLeft = '0'; // Remove extra spacing
         deleteBtn.textContent = '🗑️';
         li.appendChild(deleteBtn);        
         taskList.appendChild(li);
