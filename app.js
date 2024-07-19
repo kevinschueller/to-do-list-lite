@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const li = document.createElement('li');
         li.textContent = taskText;
         const deleteBtn = document.createElement('button');
-        deleteBtn.textContent = 'Delete';
+        deleteBtn.textContent = '🗑️';
         li.appendChild(deleteBtn);
         taskList.appendChild(li);
     }
