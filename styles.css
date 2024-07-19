@@ -1,112 +1,114 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
 }
 
 .container {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .input-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 input[type="text"] {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-right: 10px;
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px;
 }
 
 button {
-    padding: 0; /* Remove padding from all buttons */
-    border: none; /* Remove border from all buttons */
-    background-color: transparent;
-    color: #28a745;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 0; /* Remove all margin to eliminate spacing */
+  padding: 0; /* Remove padding from all buttons */
+  border: none; /* Remove border from all buttons */
+  background-color: transparent;
+  color: #28a745;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0; /* Remove all margin to eliminate spacing */
 }
 
 button:hover {
-    border-color: #218838;
-    color: #218838;
+  border-color: #218838;
+  color: #218838;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 li {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    animation: fadeIn 0.5s ease-in-out;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 li.removing {
-    animation: fadeOut 0.5s ease-in-out;
+  animation: fadeOut 0.5s ease-in-out;
 }
 
 li:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 li.completed {
-    text-decoration: line-through;
-    color: #888;
+  text-decoration: line-through;
+  color: #888;
 }
 
 li button {
-    border: none; /* Remove border from all buttons */
-    background-color: transparent;
-    color: #dc3545;
+  border: none; /* Remove border from all buttons */
+  background-color: transparent;
+  color: #dc3545;
+  margin: 0 2px; /* Adjust this value to control spacing */
+  padding: 2px 4px; /* Adjust padding to make buttons more compact */
 }
 
 li button:hover {
-    border-color: #c82333;
-    color: #c82333;
+  border-color: #c82333;
+  color: #c82333;
 }
