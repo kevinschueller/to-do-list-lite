@@ -44,14 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (newTaskText !== null) {
                 li.firstChild.textContent = newTaskText;
             }
-        } else if (e.target.tagName === 'LI') {
-        if (e.target.tagName === 'BUTTON') {
-            const li = e.target.parentElement;
-            li.classList.add('removing');
-            li.addEventListener('animationend', () => {
-                taskList.removeChild(li);
-            });
-        } else if (e.target.tagName === 'LI') {
+        } else if (e.target.tagName === 'LI') {            
             e.target.classList.toggle('completed');
         }
     });
