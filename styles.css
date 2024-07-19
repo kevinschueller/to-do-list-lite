@@ -42,7 +42,7 @@ input[type="text"] {
 }
 
 button {
-    padding: 10px 20px;
+    padding: 0; /* Remove padding from all buttons */
     border: none; /* Remove border from all buttons */
     background-color: transparent;
     color: #28a745;
