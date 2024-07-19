@@ -14,7 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
     taskList.addEventListener('click', (e) => {
         if (e.target.tagName === 'BUTTON') {
             const li = e.target.parentElement;
-            taskList.removeChild(li);
+            li.classList.add('removing');
+            li.addEventListener('animationend', () => {
+                taskList.removeChild(li);
+            });
         } else if (e.target.tagName === 'LI') {
             e.target.classList.toggle('completed');
         }
