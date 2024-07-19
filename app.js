@@ -21,6 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    const clearCompletedBtn = document.getElementById('clear-completed-btn');
+
+    clearCompletedBtn.addEventListener('click', () => {
+        const completedTasks = taskList.querySelectorAll('.completed');
+        completedTasks.forEach(task => taskList.removeChild(task));
+    });
+
     taskList.addEventListener('click', (e) => {
         if (e.target.tagName === 'BUTTON') {
             const li = e.target.parentElement;
