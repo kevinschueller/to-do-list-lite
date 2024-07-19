@@ -10,7 +10,7 @@ This application allows users to manage tasks by adding and deleting them from a
 
 1. Clone the repository:
    ```
-   git clone <repository-url>
+   git clone https://github.com/kevinschueller/to-do-list-lite
    ```
 2. Navigate to the project directory:
    ```
