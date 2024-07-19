@@ -1,9 +1,13 @@
 # Application Name
 
+Modern To-do List
+
 ## Description
+
 This application allows users to manage tasks by adding and deleting them from a list.
 
 ## How to Run
+
 1. Clone the repository:
    ```
    git clone <repository-url>
