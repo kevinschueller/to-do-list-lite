@@ -11,6 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    taskInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            const taskText = taskInput.value.trim();
+            if (taskText !== '') {
+                addTask(taskText);
+                taskInput.value = '';
+            }
+        }
+    });
+
     taskList.addEventListener('click', (e) => {
         if (e.target.tagName === 'BUTTON') {
             const li = e.target.parentElement;
