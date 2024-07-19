@@ -43,15 +43,16 @@ input[type="text"] {
 
 button {
     padding: 10px 20px;
-    border: none;
-    background-color: #28a745;
-    color: #fff;
+    border: 2px solid #28a745;
+    background-color: transparent;
+    color: #28a745;
     border-radius: 4px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #218838;
+    border-color: #218838;
+    color: #218838;
 }
 
 @keyframes fadeIn {
@@ -99,9 +100,12 @@ li.completed {
 }
 
 li button {
-    background-color: #dc3545;
+    border: 2px solid #dc3545;
+    background-color: transparent;
+    color: #dc3545;
 }
 
 li button:hover {
-    background-color: #c82333;
+    border-color: #c82333;
+    color: #c82333;
 }
